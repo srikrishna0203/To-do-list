@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.input-field{
+    width: 30vw;
+    height: 50px;
+    background-color: rgb(77, 79, 79);
+    display: flex;
+    justify-content:space-between;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 20px;
+}
+#input{
+    width:20vw;
+    height: 35px;
+    border: 0;
+    text-align: center;
+    font-size: 18px;   
+}
+#but{
+    width: 8vw;
+    height: 35px;
+    border: 0;
+    border-radius: 5px;
+}
+.pending-cont, .completed-tasks{
+    width: 30vw;
+    background-color: rgb(77, 79, 79);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#pend-title, #comp-title{
+    font-size: 20px;
+    color: rgb(254, 17, 4);
+    background-color: rgb(244, 239, 239);
+}
+.pend-list, #comp-list{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+#item{
+    display: flex;
+    justify-content: space-between;
+}
+#task{
+    width: 20vw;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width:60%;
+    word-wrap: break-word;
+    color: white;
+      
+}
+#but2{
+    width: 12vw;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+#icon{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border: 0;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+#comp-title{
+    color: green;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 700px) {
+    .main-container {
+      width: 100vw;
+    }
+  
+    .input-field,
+    .pending-cont,
+    .completed-tasks {
+      width:70vw;
+      align-items: center;
+    }
+  
+    #input {
+      width:40vw;
+      height: 20px;
+      font-size: 12px;
+    }
+  
+    #but {
+      width:18vw;
+      margin-top: 10px;
+    }
+  
+    #pend-title,
+    #comp-title {
+      font-size: 12px;
+    }
+  
+    #task {
+      width: 100%;
+      max-width: 100%;
+      font-size: 12px;
+    }
+  
+    #but2 {
+      width: 100%;
+    }
+    #no-pen{
+        font-size: 15px;
+    }
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
